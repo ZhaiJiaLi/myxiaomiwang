@@ -59,6 +59,7 @@ a.list2{
     float:right;
     line-height:40px;
     padding-left:18px;
+    position: relative;
 }
 .mainright img{
     width:21px;
@@ -69,6 +70,22 @@ a.list2{
 .shoppingcar{
     color:#b0b0b0;
     margin-left:5px;
+}
+.shoppingdown{
+    width: 318px;
+    height: 0;
+    background: #fff;
+    position: absolute;
+    top:40px;
+    right:0;
+    /*display: none;*/
+    z-index: 99;
+    text-align:center;
+    line-height: 98px;
+    overflow: hidden;
+    transition: all .3s;
+    color:#333;
+
 }
 .icon-gouwuchekong{
     font-size:16px;
@@ -464,7 +481,7 @@ a.list2{
 }
 /*手机部分结束*/
 /*家电部分开始*/
-.homeele{
+.homeele,.zhineng,.dapei,.peijian,.zhoubian{
     width:1226px;
     height:674px;
     margin:0 auto ;
@@ -497,16 +514,21 @@ a.list2{
     line-height: 30px;
     margin-right:30px;
     margin-top:15px;
+    border-bottom:2px solid #f5f5f5;
+}
+.header_right li:first-child{
+    border-bottom:2px solid #ff6700;
+    color:#ff6700;
 }
 .header_right li i{
     font-size:24px;
     color:#b0b0b0;
 }
-.header_right li:hover{
-    border-bottom:2px solid #ff6700;
-    color:#ff6700;
-    cursor: pointer;
-}
+/*.header_right li:hover{*/
+    /*border-bottom:2px solid #ff6700;*/
+    /*color:#ff6700;*/
+    /*cursor: pointer;*/
+/*}*/
 .header_right li:hover i{
     color:#ff6700;
 }
@@ -546,6 +568,7 @@ a.list2{
     width:978px;
     height:614px;
     float:right;
+    position: relative;
 }
 .btn_right .li2{
     background: none;
@@ -684,7 +707,22 @@ a.list2{
     color:#ffbc8f;
     line-height: 20px;
 }
+/*家电部分选项卡开始*/
+.btn_rightBox{
+    width:978px;
+    height:614px;
+    background: #2196f3;
+    position: absolute;
+    top:0;right:0;
+    z-index: 5;
+}
+/*家电部分选项卡结束*/
 /*家电结束*/
+/*智能部分开始*/
+#header-zhi{
+    width:300px;
+}
+/*智能部分结束*/
 /*banner部分*/
 .banner{
     width: 1226px;
@@ -703,9 +741,15 @@ a.list2{
     width:100%;
     height:100%;
     display: block;
+
+}
+.img-box  li{
+    width: 100%;
+    height: 100%;
     position:absolute;
     top:0;
     left:0;
+    z-index:5;
 }
 .aside{
     width:234px;
@@ -714,22 +758,79 @@ a.list2{
     position: absolute;
     top:0;
     left:0;
+    z-index: 11;
 }
-.aside li{
+.aside .asidenav{
     width:100%;
     height:42px;
     font-size:14px;
     line-height: 42px;
 }
-.aside li:first-child{
+/*侧导航的选项卡*/
+.asideBox{
+    width: auto;
+    height: 460px;
+    background: #fff;
+    position: absolute;
+    top:0;
+    left: 234px;
+    display: none;
+    z-index: 2;
+
+}
+.navphone {
+    height: 460px;
+    width: 992px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /*justify-content: space-between;*/
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+
+}
+.navphone li{
+    width: 248px;
+    height:76px;
+    padding:18px 20px;
+    box-sizing: border-box;
+}
+.asideBox img{
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 12px;
+}
+.asideBox span{
+    font-size: 14px;
+}
+.navelec {
+    width: 724px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+
+}
+.navelec li{
+    width: 248px;
+    height:76px;
+    padding:18px 20px;
+    box-sizing: border-box;
+}
+/*侧导航选项卡结束*/
+.aside .asidenav:first-child{
     margin-top:20px;
 }
+
 .listarrow{
     float:right;
 }
 .textList{
     float:left;
-    margin-top:
+    /*margin-top:*/
 }
 .textList,.listarrow{
     color:#fff;
@@ -741,7 +842,7 @@ a.list2{
     padding-left:29px;
     padding-right:24px;
 }
-.aside li:hover{
+.aside .asidenav:hover{
     background: #ff6700;
 }
 .pre{
@@ -753,6 +854,7 @@ a.list2{
     bottom: 195px;
     background-image: url("../img/icon-slides.png");
     background-position: 83px 0;
+    z-index: 20;
 }
 .pre:hover{
     background-position: 0px 0;
@@ -766,6 +868,7 @@ a.list2{
     bottom: 195px;
     background-image: url("../img/icon-slides.png");
     background-position: 41px 0;
+    z-index: 20;
 }
 .next:hover{
     background-position: 125px 0;
@@ -776,6 +879,7 @@ a.list2{
     position:absolute;
     right:35px;
     bottom:25px;
+    z-index: 20;
 }
 .cirfive li{
     width:6px;
@@ -788,6 +892,9 @@ a.list2{
 }
 .cirfive li:last-child{
     margin-right:0;
+}
+.cirfive .hot{
+    background: #B9E2E1;
 }
 .cirfive li:hover{
     background: #B9E2E1;
@@ -1264,7 +1371,6 @@ a.list2{
     position: absolute;
     right: -6px;
 }
-
 /*右下角固定定位结束*/
 
 
