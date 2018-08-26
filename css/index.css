@@ -502,7 +502,7 @@ a.list2{
     line-height: 60px;
 }
 .header_right{
-    width:252px;
+    /*width:252px;*/
     height:60px;
     float:right;
 }
@@ -711,7 +711,7 @@ a.list2{
 .btn_rightBox{
     width:978px;
     height:614px;
-    background: #2196f3;
+    /*background: #2196f3;*/
     position: absolute;
     top:0;right:0;
     z-index: 5;
@@ -723,6 +723,12 @@ a.list2{
     width:300px;
 }
 /*智能部分结束*/
+/*周边开始*/
+#zhou{
+    width:315px;
+}
+
+/*周边结束*/
 /*banner部分*/
 .banner{
     width: 1226px;
@@ -778,23 +784,7 @@ a.list2{
     z-index: 2;
 
 }
-.navphone {
-    height: 460px;
-    width: 992px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /*justify-content: space-between;*/
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
 
-}
-.navphone li{
-    width: 248px;
-    height:76px;
-    padding:18px 20px;
-    box-sizing: border-box;
-}
 .asideBox img{
     width: 40px;
     height: 40px;
@@ -814,12 +804,54 @@ a.list2{
     box-shadow: 0 8px 16px rgba(0,0,0,0.18);
 
 }
-.navelec li{
+.navphone {
+    height: 460px;
+    width: 992px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /*justify-content: space-between;*/
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+
+}
+.navtwo{
+    width: 496px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+}
+.navone{
+    width: 248px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+}
+.navelec li,.navtwo li,.navphone li,.navone li{
     width: 248px;
     height:76px;
     padding:18px 20px;
     box-sizing: border-box;
 }
+.navphone {
+    height: 460px;
+    width: 992px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /*justify-content: space-between;*/
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+
+}
+}
+
 /*侧导航选项卡结束*/
 .aside .asidenav:first-child{
     margin-top:20px;
@@ -923,13 +955,12 @@ a.list2{
 }
 .hotprobottom ul li{
     width:296px;
-    height:100%;
     float: left;
     margin-right: 14px;
     background: #ffffff;
     transition: all .2s;
 }
-.hotprobottom ul li:hover {
+.hotprobottom ul .video:hover,.hotprobottom ul .content:hover{
     transform: translateY(-5px);
     box-shadow: 0px 8px 20px 5px rgba(0,0,0,0.1);
 }
@@ -1021,6 +1052,7 @@ a.list2{
     line-height: 24px;
     color:#ffac13;
 }
+
 .content h4{
     width: 100%;
     height:25px;
@@ -1043,6 +1075,10 @@ a.list2{
 .content .hotpic-des{
     height:40px
 }
+.content{
+    float: left;
+    overflow: hidden;
+}
 .content .price{
     width:100%;
     text-align: center;
@@ -1055,26 +1091,59 @@ a.list2{
     height:154px;
     margin:0 auto 10px;
 }
-.con_img img{
+
+.con_img img,.con_img a{
+    display: block;
     width:216px;
     height:154px;
 }
 .con_circle{
-    margin:0 auto;
-    width:114px;
-    height:10px;
+
+    margin:0 auto 20px;
+    width:296px;
+    height:30px;
+    box-sizing: border-box;
+    text-align: center;
+
 }
-.content .con_circle li{
+.con_circle div{
+    width: 10px;
+    height: 10px;
+    padding: 10px;
+    margin: 0 2px;
+    display: inline-block;
+}
+.cirnei{
+    /*border-color: #ff6700;*/
+    display: block;
     width: 6px;
-    height:6px;
-    float: left;
-    margin-right: 26px;
-    border-radius: 50%;
-    background:#b0b0b0;
+    height: 6px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    text-align: left;
+    overflow: hidden;
+    background: #B0B0B0;
 }
-.content .con_circle li:hover {
+
+.imglist{
+    width: 296px;
+    height: 275px;
+}
+.cards{
+    position: absolute;
+    top:90px;
+    left:296px;
+}
+.content .imglist li{
+    transition: none;
+}
+.content .con_circle .cirnei:hover {
     background: #ff6700;
     /*border:2px solid #ff6700;*/
+}
+.content .con_circle .cirB:hover span,.cirbig{
+    border: 2px solid #ff6700;
+    background: #ffffff;
 }
 .con_circle li:last-child{
     margin-right: 0;
@@ -1271,7 +1340,7 @@ a.list2{
 }
 .bottomlogo{
     width:1226px;
-    height:;
+    /*height:;*/
     padding:30px 0;
     background: #fafafa;
     margin:0 auto;
@@ -1289,8 +1358,8 @@ a.list2{
     height:55px;
     float: left;
     margin-left:10px;
-    line-height: 18px; 
-} 
+    line-height: 18px;
+}
 .xiaomilogofoot{
      float: left;
 }
@@ -1324,7 +1393,7 @@ a.list2{
     text-align: center;
     line-height: 39px;
     position: relative;
-    
+
     background: #fff;
 }
 .barpeople i{
@@ -1338,7 +1407,7 @@ a.list2{
 }
 .barpeople p{
     width: 74px;
-    height:27px; 
+    height:27px;
     line-height: 27px;
     float: right;
     background: #fff;

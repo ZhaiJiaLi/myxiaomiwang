@@ -32,7 +32,7 @@ window.onload=function () {
     // let lis=header_right.getElementsByTagName("li");
 
     let btn_rightBox=homeele.getElementsByClassName("btn_rightBox");
-    console.log(smallli,btn_rightBox);
+    // console.log(smallli,btn_rightBox);
     for (let i=0;i<smallli.length;i++){
         smallli[i].onmouseenter=function () {
             for (let j=0;j<smallli.length;j++) {
@@ -79,6 +79,10 @@ window.onload=function () {
 
     let peijian=document.getElementsByClassName("peijian")[0];
     xxk(peijian);
+
+    let zhoubian=document.getElementsByClassName("zhoubian")[0];
+    // console.log(zhoubian);
+    xxk(zhoubian);
 
 
 
@@ -146,15 +150,198 @@ window.onload=function () {
             cirlis[i].className="hot";
             num=i;
         }
-
-
-
-
-
-
-
-
     }
+
+//中下部双下标轮播
+    /*let cards=document.querySelectorAll(".content0 .cards");
+    let cirbigs=document.querySelectorAll(".content0 .con_circle span");
+    let pre1=document.querySelector(".content0 .con-pre");
+    let next1=document.querySelector(".content0 .con-next");
+    let cirB=document.querySelectorAll(".content0 .con_circle div");
+    // console.log(cirB);
+    // console.log(cards, cirbigs,pre1,next1);
+    let nown=nextn=0;
+    let flag=true;
+    function RtoL() {
+        nextn++;
+        if (nextn==cards.length) {
+            nextn=0;
+        }
+        cards[nextn].style.left="275px";
+        console.log(cards[nextn]);
+        animate( cards[nown],{left:-275});
+        animate( cards[nextn],{left:0},function () {
+            flag=true;
+        });
+        cirbigs[nown].classList.remove("cirbig");
+        cirbigs[nextn].classList.add("cirbig");
+        nown=nextn;
+    }
+    function LtoR() {
+        nextn--;
+        if (nextn<0) {
+            nextn=cards.length-1;
+        }
+        cards[nextn].style.left="275px";
+        // console.log(cards[nextn]);
+        animate( cards[nown],{left:-275});
+        animate( cards[nextn],{left:0},function () {
+            flag=true;
+        });
+        cirbigs[nown].classList.remove("cirbig");
+        cirbigs[nextn].classList.add("cirbig");
+        nown=nextn;
+    }
+    next1.onclick=function () {
+        if (!flag){
+            return;
+        }
+        if (cards[nextn]==cards.length-1){
+            return;
+        }
+        flag=false;
+        RtoL();
+    }
+    pre1.onclick=function () {
+        if (!flag){
+            return;
+        }
+        if (cards[nextn]==0) {
+            return;
+        }
+        flag=false;
+        LtoR();
+    }
+    for (let i=0;i<cirbigs.length;i++){
+        cirbigs[i].onclick=function () {
+            if (i==nown){
+                return;
+            }else if(i>nown){
+                cards[i].style.left="275px";
+                animate( cards[nown],{left:-275});
+                animate( cards[i],{left:0},function () {
+                    flag=true;
+                });
+                cirbigs[nown].classList.remove("cirbig");
+                cirbigs[i].classList.add("cirbig");
+                cirB[nown].classList.remove("cirB");
+                cirB[i].classList.add("cirB");
+            }else{
+                cards[i].style.left="275px";
+                // console.log(cards[nextn]);
+                animate( cards[nown],{left:-275});
+                animate( cards[i],{left:0},function () {
+                    flag=true;
+                });
+                cirbigs[nown].classList.remove("cirbig");
+                cirbigs[i].classList.add("cirbig");
+                cirB[nown].classList.remove("cirB");
+                cirB[i].classList.add("cirB");
+            }
+            nextn=nown=i;
+        }
+    }*/
+//    封装：
+
+
+    function double(section) {
+        let cards=document.querySelectorAll("."+section+" .cards");
+        console.log(cards.length);
+        let cirbigs=document.querySelectorAll("."+section+" .con_circle span");
+        let pre1=document.querySelector("."+section+" .con-pre");
+        let next1=document.querySelector("."+section+" .con-next");
+        console.log(cards);
+        let cirB=document.querySelectorAll("."+section+" .con_circle div");
+        // console.log(cirB);
+        // console.log(cards, cirbigs,pre1,next1);
+        let nown=nextn=0;
+        let flag=true;
+        function RtoL() {
+            nextn++;
+            if (nextn==cards.length) {
+                nextn=0;
+            }
+            cards[nextn].style.left="275px";
+            console.log(cards[nextn]);
+            animate( cards[nown],{left:-275});
+            animate( cards[nextn],{left:0},function () {
+                flag=true;
+            });
+            cirbigs[nown].classList.remove("cirbig");
+            cirbigs[nextn].classList.add("cirbig");
+            nown=nextn;
+            console.log(nown);
+        }
+        function LtoR() {
+            nextn--;
+            if (nextn<0) {
+                nextn=cards.length-1;
+            }
+            cards[nextn].style.left="-275px";
+            // console.log(cards[nextn]);
+            animate( cards[nown],{left:275});
+            animate( cards[nextn],{left:0},function () {
+                flag=true;
+            });
+            cirbigs[nown].classList.remove("cirbig");
+            cirbigs[nextn].classList.add("cirbig");
+            nown=nextn;
+        }
+        next1.onclick=function () {
+            if (!flag){
+                return;
+            }
+            if (nextn==cards.length-1){
+                return;
+            }
+            flag=false;
+            RtoL();
+        }
+        pre1.onclick=function () {
+            if (!flag){
+                return;
+            }
+            if (nextn==0) {
+                return;
+            }
+            flag=false;
+            LtoR();
+        }
+        for (let i=0;i<cirbigs.length;i++){
+            cirbigs[i].onclick=function () {
+                if (i==nown){
+                    return;
+                }else if(i>nown){
+                    cards[i].style.left="275px";
+                    animate( cards[nown],{left:-275});
+                    animate( cards[i],{left:0},function () {
+                        flag=true;
+                    });
+                    cirbigs[nown].classList.remove("cirbig");
+                    cirbigs[i].classList.add("cirbig");
+                    cirB[nown].classList.remove("cirB");
+                    cirB[i].classList.add("cirB");
+                }else{
+                    cards[i].style.left="275px";
+                    // console.log(cards[nextn]);
+                    animate( cards[nown],{left:-275});
+                    animate( cards[i],{left:0},function () {
+                        flag=true;
+                    });
+                    cirbigs[nown].classList.remove("cirbig");
+                    cirbigs[i].classList.add("cirbig");
+                    cirB[nown].classList.remove("cirB");
+                    cirB[i].classList.add("cirB");
+                }
+                nextn=nown=i;
+            }
+        }
+    }
+    double("content0");
+    double("content1");
+    double("content2");
+    double("content3");
+
 
 
 
