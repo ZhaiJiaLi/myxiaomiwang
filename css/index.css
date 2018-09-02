@@ -104,6 +104,10 @@ a.list2{
     color:#ff6700;
 }
 /*导航栏*/
+.nav-big-box{
+    width: 100%;
+    position: relative;
+}
 .nav_box{
     width:1226px;
     height:100px;
@@ -121,6 +125,11 @@ a.list2{
     height: 100%;
     float:left;
     margin-left:188px;
+    position: relative;
+}
+.nav li{
+    height: 100%;
+    float:left;
 }
 .nav li a{
     float:left;
@@ -186,6 +195,113 @@ a.list2{
     color:#fff;
     background: #ff6700;
 }
+
+.navxxk{
+    width: 100%;
+    height: 0;
+    background: #fff;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 99;
+    transition: all 10ms ;
+}
+.navxxk-top{
+    border-top: 1px solid #e0e0e0;
+    transition: all .8s ease;
+}
+.nava ul{
+    width: 1226px;
+    /*margin-right: auto;*/
+    /*margin-left: auto;*/
+    display: none;
+    position: absolute;
+    left:-210px;
+    bottom:-215px;
+    z-index: 100;
+
+}
+.nava ul li{
+    position: relative;
+    float: left;
+    width: 180px;
+    padding: 35px 12px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+}
+
+.nava ul li:before{
+    position: absolute;
+    left: 0;
+    top: 35px;
+    z-index: 1;
+    width: 1px;
+    height: 100px;
+    content: "";
+    background-color: #e0e0e0;
+}
+.nava ul li:first-child:before{
+    display: none;
+
+}
+.xxkflag{
+    position: absolute;
+    top:-1px;
+    left:0;
+    z-index: 1;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+}
+.xxkflag .flags{
+    display: inline-block;
+    height: 18px;
+    padding: 1px 20px;
+    border: 1px solid #ff6700;
+    color: #ff6700;
+}
+.navxxk-pic{
+    width: 160px;
+    height: 110px;
+    /*padding-top: 35px;*/
+    margin: 0px auto 16px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.navxxk-pic img{
+    width: 160px;
+    height: 110px;
+}
+ .nava .navxxk-pic a{
+    margin: 0;
+}
+.nav .nava ul .title{
+    width: 180px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin: 0;
+
+}
+.nav .nava ul .title a{
+    width: 100%;
+    margin: 0;
+    list-style-type: none;
+    font-size: 12px;
+    display: block;
+    color: #757575;
+    text-align: center;
+}
+.navxxk-price{
+    width: 180px;
+    height: 32px;
+    margin: 0;
+    line-height: 20px;
+    color: #ff6700;
+    font-size: 12px;
+}
+/*小米闪购开始*/
 .fastshop{
     width:1226px;
     height:400px;
@@ -219,7 +335,8 @@ a.list2{
     float:left;
     border:1px solid #e0e0e0;
     border-right:none;
-    color:#e6ebf4 ;
+    color:#b0b2bc;
+    /*color:#e6ebf4 ;*/
 }
 .arrowsright{
     width:34px;
@@ -296,10 +413,11 @@ a.list2{
     line-height:46px;
 }
 .fs_bottomright{
-    float:right;
-    width:978px;
+    /*float:right;*/
+    width:1956px;
     height:340px;
     background:#fff;
+    transition: all 1s ease;
 }
 .fan{
     width:234px;
@@ -373,6 +491,17 @@ a.list2{
 .bigbg{
     width:100%;
     background: #f5f5f5;
+}
+
+.fs_boright{
+    width:978px;
+    height:340px;
+    background:#fff;
+    float: right;
+    overflow: hidden;
+}
+.fs_bottomright li:last-child{
+    margin-right: 0;
 }
 /*功能选择开始*/
 .select{
@@ -524,11 +653,6 @@ a.list2{
     font-size:24px;
     color:#b0b0b0;
 }
-/*.header_right li:hover{*/
-    /*border-bottom:2px solid #ff6700;*/
-    /*color:#ff6700;*/
-    /*cursor: pointer;*/
-/*}*/
 .header_right li:hover i{
     color:#ff6700;
 }
@@ -850,7 +974,7 @@ a.list2{
     box-shadow: 0 8px 16px rgba(0,0,0,0.18);
 
 }
-}
+
 
 /*侧导航选项卡结束*/
 .aside .asidenav:first-child{
@@ -931,6 +1055,41 @@ a.list2{
 .cirfive li:hover{
     background: #B9E2E1;
 }
+/*为你推荐开始*/
+.servicefor{
+    height: 358px;
+}
+.servicefor h2{
+    width: 85px;
+}
+#Boxfor{
+    width: 1226px;
+    height: 307px;
+    overflow: hidden;
+}
+#Boxfor .btn_right{
+    width: 1226px;
+    height: 307px;
+}
+#wh{
+    width: 4904px;
+    height: 307px;
+    left:0;
+    transition: all 1s ease;
+}
+#wh li{
+    float: left;
+}
+#wh li:nth-child(4n){
+    margin-right: 14px;
+}
+#wh li:nth-child(5n){
+    margin-right: 0;
+}
+.grayarr{
+   color: #E0E0E0;
+}
+/*为你推荐结束*/
 /*热评产品开始*/
 .hotpro{
     width:1226px;
@@ -1441,6 +1600,7 @@ a.list2{
     right: -6px;
 }
 /*右下角固定定位结束*/
+
 
 
 

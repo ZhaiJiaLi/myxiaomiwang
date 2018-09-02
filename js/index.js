@@ -242,15 +242,13 @@ window.onload=function () {
         }
     }*/
 //    封装：
-
-
     function double(section) {
         let cards=document.querySelectorAll("."+section+" .cards");
-        console.log(cards.length);
+        // console.log(cards.length);
         let cirbigs=document.querySelectorAll("."+section+" .con_circle span");
         let pre1=document.querySelector("."+section+" .con-pre");
         let next1=document.querySelector("."+section+" .con-next");
-        console.log(cards);
+        // console.log(cards);
         let cirB=document.querySelectorAll("."+section+" .con_circle div");
         // console.log(cirB);
         // console.log(cards, cirbigs,pre1,next1);
@@ -342,9 +340,102 @@ window.onload=function () {
     double("content2");
     double("content3");
 
+//小米闪购部分移动
+    let fspbtn=document.querySelectorAll(".fastshop .fsparr div");
+    let fspul=document.querySelector(".fastshop .fspul");
+    let fspwidth=parseInt(getComputedStyle(fspul,null).width)/2;
+    console.log(fspbtn[0],fspbtn[1], fspul, fspwidth);
+    let timess=0;
+    fspbtn[1].onclick=function () {
+        timess++;
+        if (timess>=2){
+            timess=1;
+        }
+        if (timess>=1) {
+            this.classList.add("grayarr");
+        }
+        if (timess>0){
+            fspbtn[0].classList.remove("grayarr");
+        }
+        fspul.style.transform="translateX("+(-fspwidth*timess)+"px)";
+    }
+    fspbtn[0].onclick=function () {
+        timess--;
+        if (timess==-1){
+            timess=0;
+        }
+        if (timess<=0){
+            this.classList.add("grayarr");
+        }
+        if (timess<1) {
+            fspbtn[1].classList.remove("grayarr")
+        }
+        fspul.style.transform="translateX("+(-fspwidth*timess)+"px)";
+    }
 
 
+//为你推荐部分移动
+    let forbtn=document.querySelectorAll(".servicefor .fs_right div");
+    let ul=document.querySelector("#wh");
+    let widthul=parseInt(getComputedStyle(ul,null).width)/4;
+    // console.log(forbtn[0],forbtn[1],ul,widthul);
+    let times=0;
+    forbtn[1].onclick=function () {
+        times++;
+        if (times>=3) {
+           this.classList.add("grayarr");
+        }
+        if(times>0) {
+            forbtn[0].classList.remove("grayarr");
+        }
+        if (times>=4){
+            times=3;
+        }
+        ul.style.transform="translateX("+(-widthul*times)+"px)";
 
+    }
+    forbtn[0].onclick=function () {
+        times--;
+        console.log(times);
+        if (times<=0) {
+            this.classList.add("grayarr");
+        }
+        if (times<=-1){
+            times=0;
+        }
+        if (times<3) {
+            forbtn[1].classList.remove("grayarr");
+        }
+        ul.style.transform="translateX("+(-widthul*times)+"px";
+    }
+    //nav部分选项卡
+    let xxklis=document.querySelectorAll(".nav .nava");
+    let navul=document.querySelector(".nav");
+    let uls=document.querySelectorAll(".nav ul");
+    let navxxk=document.querySelector(".navxxk");
+    console.log(xxklis, uls, navxxk);
+    navul.onmouseenter=function(){
+        navxxk.style.height="229px";
+        navxxk.classList.add("navxxk-top");
+    };
+    navul.onmouseleave=function(){
+        navxxk.style.height="0";
+        navxxk.classList.remove("navxxk-top");
+    };
+    for (let i=0;i<xxklis.length;i++){
+        xxklis[i].onmouseenter=function () {
+            for(let j=0;j<xxklis.length;j++){
+                uls[j].style.display="none";
+            }
+            uls[i].style.display="block";
+        }
+        xxklis[i].onmouseleave=function () {
+            for(let j=0;j<xxklis.length;j++){
+               uls[j].style.display="none";
+            }
+            uls[i].style.display="none";
+        }
+    }
 
 
 
