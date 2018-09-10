@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0108)http://localhost:63342/day%2032%20%E8%8A%82%E7%82%B9/%E4%BD%9C%E4%B8%9A.html?_ijt=1s52rj3v06csv16du4icf6vs25 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Title</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    h3{
+        width: 70px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        color: #fff;
+        background: deepskyblue;
+        text-align: center;
+        margin: 20px auto;
+        border-radius: 5px;
+
+    }
+    .box{
+        width: 300px;
+        height: auto;
+        margin: 20px auto;
+        border: 2px solid #333333;
+        border-radius: 5px;
+    }
+    textarea{
+        width: 100%;
+        height: 100px;
+        box-sizing: border-box;
+        outline: none;
+        resize: vertical;
+    }
+    .small{
+        width: 100%;
+        min-height: 200px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .sy{
+        width: 100%;
+        line-height: 30px;
+        font-size: 14px;
+        color: #333;
+        border-bottom:1px solid  deepskyblue;
+        padding: 5px 10px;
+        box-sizing: border-box;
+    }
+    button{
+        display: block;
+        width: 100px;
+        height: 30px;
+        font-size: 20px;
+        color: #fff;
+        background: deepskyblue;
+        border: 0;
+        border-radius: 5px;
+        margin: 20px auto;
+    }
+</style></head>
+
+<body>
+    <div class="box">
+        <h3>登录</h3>
+        <div class="small"><div class="sy">adscjmiaorvnkaselfbjra</div><div class="sy">dalkndvkls.dnvaSevn</div></div>
+        <textarea name="" id="" style="margin-top: 0px; margin-bottom: 0px; height: 73px;"></textarea>
+        <button>提交</button>
+    </div>
+
+
+<script>
+    let sma=document.querySelector(".small")
+    let texts=document.querySelector("textarea");
+    let btn=document.querySelector("button");
+    btn.onclick=function(){
+        fn();
+    }
+    function fn() {
+        let divs=document.createElement("div");
+        let textv=texts.value;
+        divs.innerHTML=textv;
+        sma.appendChild(divs);
+        texts.value="";
+        divs.classList.add("sy");
+    }
+
+
+</script></body></html>

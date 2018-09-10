@@ -147,7 +147,6 @@ a.list2{
 .search{
     width:296px;
     height:50px;
-    background:pink ;
     float:right;
     margin-top:25px;
     position:relative;
@@ -158,6 +157,7 @@ a.list2{
     border:1px solid #e0e0e0;
     background: #fff;
     float: left;
+    outline: none;
 }
 .search-submit{
     width:49px;
@@ -176,6 +176,33 @@ a.list2{
 .search-submit:hover{
     background: #ff6700;
     color:#fff;
+}
+.searchdown{
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 20;
+    width: 244px;
+    border: 1px solid #ff6700;
+    border-top: 0;
+    background: #fff;
+    display: none;
+}
+.searchdown ul{
+    width: 244px;
+}
+.searchdown ul li a{
+    position: relative;
+    display: block;
+    padding: 6px 15px;
+    font-size: 12px;
+    color: #424242;
+}
+.searchdown ul li a span{
+    position: absolute;
+    right: 15px;
+    top: 6px;
+    color: #b0b0b0;
 }
 .tip{
     width:130px;
@@ -414,7 +441,7 @@ a.list2{
 }
 .fs_bottomright{
     /*float:right;*/
-    width:1956px;
+    width:2204px;
     height:340px;
     background:#fff;
     transition: all 1s ease;
@@ -435,7 +462,7 @@ a.list2{
 .picture{
     width:160px;
     height:160px;
-    background: blue;
+    /*background: blue;*/
     margin:35px auto 0;
 }
 .picture img{
@@ -502,6 +529,7 @@ a.list2{
 }
 .fs_bottomright li:last-child{
     margin-right: 0;
+    margin-left: 14px;
 }
 /*功能选择开始*/
 .select{
@@ -608,6 +636,21 @@ a.list2{
     height:614px;
     transition: all .2s;
 }
+#phonenoborder{
+    border-bottom: 0;
+    color: #424242;
+}
+#phonenoborder:hover{
+    color: #ff6700;
+    transition: all 0.5s ease;
+}
+#phonenoborder span{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    margin-right: 5px;
+}
 /*手机部分结束*/
 /*家电部分开始*/
 .homeele,.zhineng,.dapei,.peijian,.zhoubian{
@@ -645,7 +688,7 @@ a.list2{
     margin-top:15px;
     border-bottom:2px solid #f5f5f5;
 }
-.header_right li:first-child{
+.header_right li.smallli_selected{
     border-bottom:2px solid #ff6700;
     color:#ff6700;
 }
@@ -655,6 +698,7 @@ a.list2{
 }
 .header_right li:hover i{
     color:#ff6700;
+    transition: all 0.5s ease;
 }
 .header_right li:last-child {
     margin-right:0;

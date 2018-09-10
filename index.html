@@ -6,6 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>小米官网</title>
+    <script src="js/jQuery.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/indexjQ.js"></script>
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_774002_ztdyq0r7cdo.css">
     <link rel="stylesheet" href="css/index.css">
@@ -560,6 +563,20 @@
                 </div>
                 <div class="search-submit ">
                     <i class="iconfont icon-sousuokuang"></i>
+                </div>
+                <div class="searchdown">
+                    <ul>
+                        <li><a href="">小米MIX 2S<span>约有5件</span></a></li>
+                        <li><a href="">小米6X<span>约有6件</span></a></li>
+                        <li><a href="">黑鲨游戏手机<span>约有3件</span></a></li>
+                        <li><a href="">红米Note 5<span>约有6件</span></a></li>
+                        <li><a href="">红米5A<span>约有13件</span></a></li>
+                        <li><a href="">小米电视4C<span>约有5件</span></a></li>
+                        <li><a href="">电视32英寸<span>约有3件</span></a></li>
+                        <li><a href="">笔记本pro<span>约有5件</span></a></li>
+                        <li><a href="">空气净化器<span>约有11件</span></a></li>
+                        <li><a href="">净水器<span>约有8件</span></a></li>
+                    </ul>
                 </div>
             </div>
             <div class="navxxk"></div>
@@ -1430,6 +1447,19 @@
                             </div>
                         </a>
                     </li>
+                    <li class="fan rainbow3 fan1">
+                        <a href="">
+                            <div class="picture">
+                                <img src="img/rainbow.jpg" alt="">
+                            </div>
+                            <h3>彩虹7号电池（10粒装）</h3>
+                            <div class="intro">无汞无镉 环保电池</div>
+                            <div class="price">
+                                <div class="pricenow">1元</div>
+                                <div class="priceold">9.9元</div>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -1441,7 +1471,7 @@
             <h2 class="header_left">手机</h2>
             <div class="header_right phone">
                 <ul>
-                    <li><span>查看全部</span>
+                    <li id="phonenoborder"><span>查看全部</span>
                         <i class="iconfont icon-xiayiyeqianjinchakangengduo-yuankuang"></i>
                         <!-- <img src="img/more_03.png" alt=""> -->
                     </li>
@@ -1580,7 +1610,7 @@
             <h2 class="header_left">家电</h2>
             <div class="header_right">
                 <ul>
-                    <li class="smallli">热门</li>
+                    <li class="smallli smallli_selected">热门</li>
                     <li class="smallli">影视影音</li>
                     <li class="smallli">电脑</li>
                     <li class="smallli">家居</li>
@@ -5767,7 +5797,7 @@
    </ul>
     <!-- 右下角固定定位开始  -->
 </div>
-<script src="js/index.js"></script>
-<script src="js/animate.js"></script>
+<!--<script src="js/index.js"></script>-->
+
 </body>
 </html>
