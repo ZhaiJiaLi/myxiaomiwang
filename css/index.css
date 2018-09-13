@@ -239,14 +239,12 @@ a.list2{
 }
 .nava ul{
     width: 1226px;
-    /*margin-right: auto;*/
-    /*margin-left: auto;*/
     display: none;
     position: absolute;
     left:-210px;
     bottom:-215px;
     z-index: 100;
-
+    transition: all 0.3s;
 }
 .nava ul li{
     position: relative;

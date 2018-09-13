@@ -341,37 +341,37 @@ window.onload=function () {
     double("content3");
 
 //小米闪购部分移动
-    let fspbtn=document.querySelectorAll(".fastshop .fsparr div");
-    let fspul=document.querySelector(".fastshop .fspul");
-    let fspwidth=parseInt(getComputedStyle(fspul,null).width)/2;
-    console.log(fspbtn[0],fspbtn[1], fspul, fspwidth);
-    let timess=0;
-    fspbtn[1].onclick=function () {
-        timess++;
-        if (timess>=2){
-            timess=1;
-        }
-        if (timess>=1) {
-            this.classList.add("grayarr");
-        }
-        if (timess>0){
-            fspbtn[0].classList.remove("grayarr");
-        }
-        fspul.style.transform="translateX("+(-fspwidth*timess)+"px)";
-    }
-    fspbtn[0].onclick=function () {
-        timess--;
-        if (timess==-1){
-            timess=0;
-        }
-        if (timess<=0){
-            this.classList.add("grayarr");
-        }
-        if (timess<1) {
-            fspbtn[1].classList.remove("grayarr")
-        }
-        fspul.style.transform="translateX("+(-fspwidth*timess)+"px)";
-    }
+//     let fspbtn=document.querySelectorAll(".fastshop .fsparr div");
+//     let fspul=document.querySelector(".fastshop .fspul");
+//     let fspwidth=parseInt(getComputedStyle(fspul,null).width)/2;
+//     console.log(fspbtn[0],fspbtn[1], fspul, fspwidth);
+//     let timess=0;
+//     fspbtn[1].onclick=function () {
+//         timess++;
+//         if (timess>=2){
+//             timess=1;
+//         }
+//         if (timess>=1) {
+//             this.classList.add("grayarr");
+//         }
+//         if (timess>0){
+//             fspbtn[0].classList.remove("grayarr");
+//         }
+//         fspul.style.transform="translateX("+(-fspwidth*timess)+"px)";
+//     }
+//     fspbtn[0].onclick=function () {
+//         timess--;
+//         if (timess==-1){
+//             timess=0;
+//         }
+//         if (timess<=0){
+//             this.classList.add("grayarr");
+//         }
+//         if (timess<1) {
+//             fspbtn[1].classList.remove("grayarr")
+//         }
+//         fspul.style.transform="translateX("+(-fspwidth*timess)+"px)";
+//     }
 
 
 //为你推荐部分移动
